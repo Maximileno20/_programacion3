@@ -2,11 +2,12 @@ import express, { urlencoded } from 'express';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import router from './controllers.js';
+import { Sentences } from './database/sentences.js';
 
 
 
 
-
+Sentences()
 const app = express();
 const puerto = 3000 || process.env.PORT;
 
